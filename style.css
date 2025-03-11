@@ -161,6 +161,7 @@ p {
 .month {
   display: inline-block;
   /* border: 2px dotted white;  */
+  color: hsl(220, 14%, 88%);
 }
 
 .price-month {

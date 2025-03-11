@@ -1,0 +1,229 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  border: 4px dotted darkcyan;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 60em;
+  border: 4px dotted darkgoldenrod;
+  padding-block: 40px;
+  padding-inline: 20px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr);
+  grid-template-rows: repeat(3, minmax(200px, 1fr));
+}
+
+.card-1 {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.card-1 h2 {
+  color: hsl(179, 62%, 43%);
+}
+
+p {
+  color: hsl(218, 22%, 67%);
+}
+
+.card-1 h2 +  p {
+  color: hsl(71, 73%, 54%);
+}
+
+.card-2 {
+  background-color: hsl(179, 62%, 43%);
+  padding: 20px;
+}
+
+.price {
+  font-size: 2em;
+  color: white;
+}
+
+.card-2 h2, .card-3 h2 {
+  font-size: 1em;
+  color: hsl(220, 14%, 88%);
+}
+
+.month {
+  display: inline-block;
+  /* border: 2px dotted white;  */
+}
+
+.price-month {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.access {
+  color: hsl(220, 14%, 88%);
+  margin-top: px;
+}
+
+.card-2 button {
+  width: 100%;
+  padding: 15px;
+  color: white;
+  background-color: hsl(71, 73%, 54%);
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.card-2 button:hover {
+  background-color: hsla(71, 73%, 54%, 0.7);
+}
+
+.card-3 {
+  background-color: hsla(179, 62%, 43%, 0.8);
+  padding: 20px;
+  font-size: 1em;
+}
+
+.card-3 ul {
+  list-style: none;
+  padding: 0;
+  color: hsl(220, 14%, 88%);
+}
+
+@media (min-width: 40em) {
+  main {
+    grid-template-areas: 
+    "aa aa"
+    "bb cc";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .card-1 {
+    grid-area: aa;
+    font-size: 1.5em;
+  }
+
+  .card-2 {
+    grid-area: bb;
+    font-size: 1.2em;
+  }
+
+  .card-3 {
+    grid-area: cc;
+    font-size: 1.2em;
+  }
+}

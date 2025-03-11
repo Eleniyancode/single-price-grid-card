@@ -99,7 +99,7 @@ html, body {
 
 body {
   width: 100%;
-  border: 4px dotted darkcyan;
+  /* border: 4px dotted darkcyan; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -114,7 +114,7 @@ body {
 .wrapper {
   width: 100%;
   max-width: 60em;
-  border: 4px dotted darkgoldenrod;
+  /* border: 4px dotted darkgoldenrod; */
   padding-block: 40px;
   padding-inline: 20px;
 }
@@ -214,16 +214,16 @@ p {
 
   .card-1 {
     grid-area: aa;
-    font-size: 1.5em;
+    font-size: 1em;
   }
 
   .card-2 {
     grid-area: bb;
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   .card-3 {
     grid-area: cc;
-    font-size: 1.2em;
+    font-size: 1em;
   }
 }

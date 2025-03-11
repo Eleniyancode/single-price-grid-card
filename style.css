@@ -210,7 +210,7 @@ p {
     "bb cc";
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    padding: 100px;
+    padding-left: 100px;
   }
 
   .card-1 {

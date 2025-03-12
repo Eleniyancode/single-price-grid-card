@@ -207,7 +207,7 @@ p {
 @media (min-width: 40em) {
 
   .wrapper {
-    border: 2px solid cyan;
+    /* border: 2px solid cyan; */
     width: 100%;
     max-width: 60em;
   }
@@ -218,7 +218,7 @@ p {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 200px 250px;
     /* padding-left: 100px; */
-    border: 2px solid rebeccapurple;
+    /* border: 2px solid rebeccapurple; */
   }
 
   .card-1 {
